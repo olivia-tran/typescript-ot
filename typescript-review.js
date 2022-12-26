@@ -26,14 +26,16 @@ function twoFer(name) {
 function isLeapYear(year) {
     return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
 }
-// To determine whether a year is a leapyear, use this "formula":
-// A YEAR IS A LEAPYEAR IF
-// - year is a multiple of 4 AND not a multiple of 100
-// OR...
-// - year is a multiple of 400
-// hint - use modulo
-console.log(twoFer("Julia"));
-console.log(greet("Olivia"));
-console.log(isLeapYear(2022));
-console.log(isLeapYear(2024));
-console.log(isLeapYear(2020));
+var coordinate = { x: 34, y: 2 };
+function randomCoordinate() {
+    return { x: Math.random(), y: Math.random() };
+}
+function doubleCoordinate(coordinate) {
+    return { x: coordinate.x * 2, y: coordinate.y * 2 };
+}
+console.log(doubleCoordinate(coordinate));
+var happyFace = {
+    radius: 4,
+    color: "yellow"
+};
+console.log(happyFace);

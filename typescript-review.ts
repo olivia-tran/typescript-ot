@@ -34,8 +34,36 @@ function isLeapYear(year: number): boolean {
 // OR...
 // - year is a multiple of 400
 // hint - use modulo
-console.log(twoFer("Julia"));
-console.log(greet("Olivia"));
-console.log(isLeapYear(2022));
-console.log(isLeapYear(2024));
-console.log(isLeapYear(2020));
+// console.log(twoFer("Julia"));
+// console.log(greet("Olivia"));
+// console.log(isLeapYear(2022));
+// console.log(isLeapYear(2024));
+// console.log(isLeapYear(2020));
+
+type Coordinate = {
+  x: number;
+  y: number;
+};
+
+let coordinate: Coordinate = { x: 34, y: 2 };
+function randomCoordinate(): Coordinate {
+  return { x: Math.random(), y: Math.random() };
+}
+function doubleCoordinate(coordinate: Coordinate): Coordinate {
+  return { x: coordinate.x * 2, y: coordinate.y * 2 };
+}
+console.log(doubleCoordinate(coordinate));
+
+type Circle = {
+  radius: number;
+};
+type Colorful = {
+  color: string;
+};
+type ColorfulCircle = Circle & Colorful;
+const happyFace: ColorfulCircle = {
+  radius: 4,
+  color: "yellow",
+};
+
+console.log(happyFace);
